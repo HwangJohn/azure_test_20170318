@@ -120,3 +120,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# AZURE settings
+DEFAULT_FILE_STORAGE='storages.backends.azure_storage.AzureStorage'
+AZURE_ACCOUNT_NAME='testazurerewq'
+AZURE_CONTAINER='testazurerewq'
+
+import os
+AZURE_ACCOUNT_KEY=os.environ['AZURE_ACCOUNT_KEY']
